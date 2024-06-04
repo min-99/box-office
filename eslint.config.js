@@ -1,12 +1,6 @@
 const globals = require('globals');
 
 module.exports = {
-  extends: [
-    'eslint:recommended',
-    'plugin:react/recommended',
-    'standard',
-    'plugin:prettier/recommended',
-  ],
   languageOptions: {
     ecmaVersion: 12,
     sourceType: 'module',
@@ -15,11 +9,10 @@ module.exports = {
       jest: true,
     },
   },
-  plugins: ['react', 'react-hooks'],
   rules: {
     'no-useless-constructor': 'off',
   },
-  ignorePatterns: ['node_modules/', 'build/', 'dist/'],
+  ignores: ['**/node_modules/', '.git/', 'build/', 'dist/'],
   settings: {
     react: {
       version: 'detect',

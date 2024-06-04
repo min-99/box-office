@@ -2,7 +2,7 @@ import React from 'react';
 
 interface DailyBoxOfficePageProps {}
 
-const DailyBoxOfficePage = ({ test, props }: DailyBoxOfficePageProps) => {
+const DailyBoxOfficePage = (props: DailyBoxOfficePageProps) => {
   return <></>;
 };
 
