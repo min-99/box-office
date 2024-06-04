@@ -1,24 +1,19 @@
+const globals = require('globals');
+
 module.exports = {
-  env: {
-    browser: true,
-    es2021: true,
-    node: true,
-  },
-  globals: {
-    jest: true,
-  },
   extends: [
     'eslint:recommended',
     'plugin:react/recommended',
     'standard',
     'plugin:prettier/recommended',
   ],
-  parserOptions: {
-    ecmaFeatures: {
-      jsx: true,
-    },
+  languageOptions: {
     ecmaVersion: 12,
     sourceType: 'module',
+    globals: {
+      ...globals.browser,
+      jest: true,
+    },
   },
   plugins: ['react', 'react-hooks'],
   rules: {
